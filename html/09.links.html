@@ -12,11 +12,41 @@
     </style>
     <!-- Uso externo de CSS con <link> -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+        a:link {
+          color: orange;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        
+        a:visited {
+          color: green;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        
+        a:hover {
+          color: red;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+        
+        a:active {
+          color: black;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+        </style>
 </head>
 <!-- Uso inline de CSS: -->
 <body style="background-color:#e5e5e5;">
     
     <h1>Links</h1>
+
+    <h2>Contenidos</h2>
+    <a href="#phone">Ir a teléfono</a>
+
+    <hr>
 
     <p>Por defecto, el enlace se abre en la misma página:</p>
     <a href="https://www.w3schools.com/">Enlace sin target</a>
@@ -30,5 +60,31 @@
     <a href="https://www.w3schools.com/">URL absoluta</a>
     <br>
     <a href="doge.jpg">URL relativa</a>
+
+    <h2>Imagen como enlace</h2>
+
+    <p>Para colocar una imagen usamos img:</p>
+    <img src="doge.jpg" alt="Doge" width="200">
+
+    <p>Imagen como enlace:</p>
+
+    <a href="doge.jpg">
+        <img src="doge.jpg" alt="Doge" width="200">
+    </a>
+
+    <h2>Mail</h2>
+
+    <p>Enlace a email:</p>
+
+    <a href="mailto:pepe@rana.com">Enviar email</a>
+
+    <h2>Teléfono</h2>
+
+    <p id="phone">Enlace con teléfono <strong>especialmente útil en móvil</strong>:</p>
+
+    <a href="tel:123456789" title="Llama a Pepe">Llamar a Pepe</a>
+    
+    <p>Filler</p>
+    <img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200"><img src="doge.jpg" alt="Doge" width="200">
 </body>
 </html>
