@@ -32,3 +32,9 @@ Para subir un cambio:
 
 - Para crear llave abrid CMD y ejecutad `ssh-keygen` > Enter hasta el final y la llave estará en una ruta que sale en uno de estos pasos, algo como `C:\Users\<tu_usuario>/.ssh/id_rsa.pub` en Windows y algo como `/home/<usuario>/.ssh` en Linux. En Mac (wip)
 - https://docs.github.com/es/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+
+## Si hay que dejar de usar un ordenador...
+
+Opciones:
+1. Borrad las llaves de ese ordenador `id_rsa.pub` y `id_rsa`
+2. Ir a Github y borrar la llave pública
