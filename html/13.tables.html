@@ -103,6 +103,9 @@
     }
     #bordes tr, #bordes td, #bordes th {
       border: 2px solid tomato;
+      /* border-width: 5px; */
+      /* border-style: dashed; */
+      /* border-color: black; */
     }
     #bordes {
       border-collapse: separate; /* para visualizar los bordes de los elementos */
@@ -123,25 +126,29 @@
       padding: 10px;
       border-radius: 10px;
     }
+    #bordes th, #bordes td {
+      text-align: center;
+      vertical-align: middle;
+    }
   </style>
 
-  <p>Esto es un <a id="boton">botón</a>.</p>
+  <p>Esto es un <a id="boton" href="doge.jpg">botón</a>.</p>
 
   <table id="bordes">
     <tr>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
+      <th style="width: 10%;">1</th>
+      <th style="width: 50%;">2</th>
+      <th style="width: 40%;">3</th>
     </tr>
-    <tr>
+    <tr style="height: 100px;">
       <td>a</td>
       <td>b</td>
       <td>c</td>
     </tr>
-    <tr>
+    <tr style="height: 300px;">
       <td>d</td>
       <td>e</td>
-      <td>f</td>
+      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, voluptas quam labore magni assumenda placeat fugiat, error eveniet exercitationem perspiciatis quis nostrum. Veniam sed, voluptate quia illo earum deleniti repellendus.</td>
     </tr>
   </table>
 
