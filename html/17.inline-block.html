@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline y block</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+        code {
+            background-color: lightgray;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>Propiedad <code>display</code></p>
+    <h2>inline</h2>
+    <p>Los elementos inline no saltan línea.</p>
+
+    <style>
+        .inline img {
+            margin: 20px;
+        }
+    </style>
+    <div class="inline">
+        <img src="doge.jpg" alt="doge" width="100">
+        <img src="doge.jpg" alt="doge" width="100">
+        <img src="doge.jpg" alt="doge" width="100">
+    </div>
+
+    <h2>inline-block</h2>
+
+    <p>Puede ayudar a alinear mejor.</p>
+    <style>
+        .inline-block img {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px;
+        }
+    </style>
+    <div class="inline-block">
+        <img src="doge.jpg" alt="doge" width="100">
+        <img src="doge.jpg" alt="doge" width="100">
+        <img src="doge.jpg" alt="doge" width="100">
+    </div>
+
+    <h2>block</h2>
+    <p>Salta línea siempre.</p>
+    <style>
+        .block img {
+            display: block;
+            margin: 10px;
+        }
+    </style>
+    <div class="block">
+        <img src="doge.jpg" alt="doge" width="100">
+        <img src="doge.jpg" alt="doge" width="100">
+        <img src="doge.jpg" alt="doge" width="100">
+    </div>
+
+    <h2>flex</h2>
+    <p><code>flex</code> permite alinear elementos más fácilmente. Más info en <a href="https://flexboxfroggy.com/#es">rana flex</a>.</p>
+    <style>
+        .flex {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+    <div class="flex">
+        <img src="doge.jpg" alt="doge" width="100">
+        <img src="doge.jpg" alt="doge" width="100">
+        <img src="doge.jpg" alt="doge" width="100">
+    </div>
+</body>
+</html>
