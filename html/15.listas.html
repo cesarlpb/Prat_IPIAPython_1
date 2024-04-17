@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body style="background-color: aliceblue;">
+    <h2>Listas</h2>
+
+    <h2>ul</h2>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <ul>
+        <li><img src="doge.jpg" alt="doge" width="100"></li>
+        <li>Lista anidada:
+            <ul>
+                <li>1</li>
+                <li>2</li>
+            </ul>
+        </li>
+        <li>
+            <h2>Lorem, ipsum.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quidem?</p>
+        </li>
+    </ul>
+
+    <h2>ol</h2>
+
+    <ol>
+        <li>a</li>
+        <li>b
+            <ol type="i">
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum dolor.</li>
+            </ol>
+        </li>
+        <li>c</li>
+    </ol>
+    <p style="padding-left: 20px;">...</p>
+    <ol start="20">
+        <li>algo</li>
+    </ol>
+
+    <h2>ul sin bullet</h2>
+
+    <ul style="list-style: none;">
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ul>
+
+    <h2>navbar con ul</h2>
+    <style>
+        #nav {
+            list-style-type: none;
+        }
+        #nav li {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+        }
+        #nav a {
+            text-decoration: none;
+            color: white;
+            background-color: brown;
+            padding: 5px 20px;
+            border-radius: 5px;
+        }
+    </style>
+    <ul id="nav">
+        <li><a href="#">a</a></li>
+        <li><a href="#">b</a></li>
+        <li><a href="#">c</a></li>
+    </ul>
+
+    <h2>dl</h2>
+    <dl>
+        <dt>Café</dt>
+        <dd>- Lorem ipsum dolor sit amet.</dd>
+        <dt>Leche</dt>
+        <dd>- Lorem ipsum dolor sit amet.</dd>
+    </dl>
+</body>
+</html>
