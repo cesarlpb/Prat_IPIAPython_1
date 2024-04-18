@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="01.selectores.css">
+    <title>Selectores</title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+        h1, h2 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        code {
+            font-family: monospace;
+            font-weight: 600;
+            color: #111;
+        }
+        pre {
+            background-color: rgba(128, 128, 128, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <h1>Selectores</h1>
+    <h2>Etiqueta</h2>
+    <pre><code>
+    etiqueta {
+        propiedad: valor;
+    }
+    </code></pre>
+    <h2>id</h2>
+    <pre><code>
+        #id {
+            propiedad: valor;
+        }
+    </code></pre>
+    <h2>clase</h2>
+    <pre><code>
+        .clase {
+            propiedad: valor;
+        }
+    </code></pre>
+    <h2>etiqueta + clase</h2>
+    <pre><code>
+        etiqueta.clase {
+            propiedad: valor;
+        }
+    </code></pre>
+
+    <h2>Ejemplos</h2>
+
+    <div>etiqueta "div"</div>
+    <div id="miDiv">id "miDiv"</div>
+    <div class="miClase">clase</div>
+    <div class="miOtraClase">etiqueta con clase</div>
+</body>
+</html>

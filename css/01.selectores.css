@@ -1,0 +1,33 @@
+/* Selectores */
+
+/* Selector de etiqueta */
+div {
+    border: 1px solid brown;
+    margin: 10px auto;
+    padding: 5px;
+    background-color: beige;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Selector de id */
+#miDiv {
+    text-align: center;
+    background-color: brown;
+    color: white;
+}
+
+/* Selectores de clase */
+.miClase, .miOtraClase {
+    text-align: right;
+    background-color: orange;
+    color: rgb(69, 69, 47);
+    text-transform: uppercase;
+}
+
+/* Selector de etiqueta y clase */
+div.miOtraClase {
+    text-align: left;
+    background-color: red;
+    color: rgb(220, 220, 220);
+    text-transform: lowercase;
+}
