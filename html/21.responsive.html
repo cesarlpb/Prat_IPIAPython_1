@@ -6,6 +6,8 @@
     <title>Responsive</title>
 </head>
 <body>
+    <h1 style="font-size:10vw">Título Responsive</h1>
+
     <h2>Responsive</h2>
 
     <div>
@@ -21,5 +23,40 @@
     </div>
     <p>Esta imagen no existe, arroja error:</p>
     <img src="algo.jpg" alt="Flowers" style="width:50vw";>
+
+    <h2>media queries</h2>
+
+    <style>
+        #container {
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid black;
+            padding: 5px;
+        }
+        #container > div {
+            display: inline-block;
+            width: 30vw;
+            padding: 5px;
+            border: 1px dashed brown;
+            background-color: rgb(255, 181, 70);
+            color: rgb(73, 11, 11);
+            margin: 0 auto;
+            text-align: center;
+        }
+        @media screen and (max-width: 600px){
+            #container {
+                flex-direction: column;
+            }
+            #container > div {
+                width: 90%;
+            }
+        }
+    </style>
+
+    <div id="container">
+        <div>col 1</div>
+        <div>col 2</div>
+        <div>col 3</div>
+    </div>
 </body>
 </html>
