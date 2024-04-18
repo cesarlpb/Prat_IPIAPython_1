@@ -31,3 +31,12 @@ div.miOtraClase {
     color: rgb(220, 220, 220);
     text-transform: lowercase;
 }
+
+/* Selector universal: cualquiera más específico lo sobreescribe */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.miOtraClase.miOtraOtraClase {
+    letter-spacing: 5px;
+}
