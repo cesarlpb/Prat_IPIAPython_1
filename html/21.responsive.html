@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+</head>
+<body>
+    <h2>Responsive</h2>
+
+    <div>
+        <picture>
+            <!-- Hasta 600px: -->
+            <source srcset="pepe_small.jpg" media="(max-width: 600px)">
+            <!-- Hasta 1000px: -->
+            <source srcset="doge.jpg" media="(max-width: 1000px)">
+            <!-- <source srcset="flowers.jpg"> -->
+            <!-- En todos los demás casos, por encima de 1000px: -->
+            <img src="pepe_large.jpg" alt="Doge" style="width:50vw";>
+        </picture>
+    </div>
+    <p>Esta imagen no existe, arroja error:</p>
+    <img src="algo.jpg" alt="Flowers" style="width:50vw";>
+</body>
+</html>
