@@ -1,2 +1,74 @@
 /* Background */
 
+body {
+    background-color: aquamarine;
+}
+h1, h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+code {
+    font-family: monospace;
+    font-weight: 600;
+    color: #111;
+}
+pre {
+    background-color: rgba(128, 128, 128, 0.7);
+}
+div {
+background-color: green;
+}
+
+div.first {
+opacity: 0.1;
+}
+
+div.second {
+opacity: 0.3;
+}
+
+div.third {
+opacity: 0.6;
+}
+div.gradient {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(230, 230, 230);
+    height: 100px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    /* Gradiente: https://cssgradient.io/ */
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+.bg-cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background-image: url('img/paisaje.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.bg-repeat{
+    height: 250px;
+    background-image: url('img/pepe.jpg');
+    background-repeat: repeat-x;
+}
+
+.bg-cover h1, .bg-cover p {
+    color: white;
+    text-align: center;
+}
+.bg-cover div, .bg-repeat div {
+    background-color: #141414a6;
+    padding: 10px 20px;
+}
+.bg-repeat div {
+    height: 250px;
+}
+.bg-repeat p, .bg-repeat h1 {
+    color: lightgray;
+}
