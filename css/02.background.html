@@ -43,8 +43,40 @@
             height: 100px;
             text-transform: uppercase;
             letter-spacing: 5px;
+            /* Gradiente: https://cssgradient.io/ */
             background: rgb(131,58,180);
             background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        }
+        .bg-cover {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 400px;
+            background-image: url('img/paisaje.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-repeat{
+            height: 250px;
+            background-image: url('img/pepe.jpg');
+            background-repeat: repeat-x;
+        }
+
+        .bg-cover h1, .bg-cover p {
+            color: white;
+            text-align: center;
+        }
+        .bg-cover div, .bg-repeat div {
+            background-color: #141414a6;
+            padding: 10px 20px;
+        }
+        .bg-repeat div {
+            height: 250px;
+        }
+        .bg-repeat p, .bg-repeat h1 {
+            color: lightgray;
         }
     </style>
 </head>
@@ -68,5 +100,21 @@
 
     <h2>background con gradiente</h2>
     <div class="gradient"><p>gradiente</p></div>
+
+    <h2>bg-cover</h2>
+    <div class="bg-cover">
+        <div>
+            <h1>Vacaciones en los Fiordos</h1>
+            <p>¡¡¡Échate un chapuzón!!!</p>
+        </div>
+    </div>
+
+    <h2>bg-repeat</h2>
+    <div class="bg-repeat">
+        <div>
+            <h1>Pepe's Gastrobar</h1>
+            <p>¡¡¡Feels good man!!!</p>
+        </div>
+    </div>
 </body>
 </html>
