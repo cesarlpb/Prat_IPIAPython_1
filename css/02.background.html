@@ -20,40 +20,53 @@
         pre {
             background-color: rgba(128, 128, 128, 0.7);
         }
+        div {
+        background-color: green;
+        }
+
+        div.first {
+        opacity: 0.1;
+        }
+
+        div.second {
+        opacity: 0.3;
+        }
+
+        div.third {
+        opacity: 0.6;
+        }
+        div.gradient {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(230, 230, 230);
+            height: 100px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            background: rgb(131,58,180);
+            background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        }
     </style>
 </head>
 <body>
-    <h1>Selectores</h1>
-    <h2>Etiqueta</h2>
-    <pre><code>
-    etiqueta {
-        propiedad: valor;
-    }
-    </code></pre>
-    <h2>id</h2>
-    <pre><code>
-        #id {
-            propiedad: valor;
-        }
-    </code></pre>
-    <h2>clase</h2>
-    <pre><code>
-        .clase {
-            propiedad: valor;
-        }
-    </code></pre>
-    <h2>etiqueta + clase</h2>
-    <pre><code>
-        etiqueta.clase {
-            propiedad: valor;
-        }
-    </code></pre>
+    <h2>background-color</h2>
+    <div class="first">
+    <h1>opacity 0.1</h1>
+    </div>
+    
+    <div class="second">
+    <h1>opacity 0.3</h1>
+    </div>
+    
+    <div class="third">
+    <h1>opacity 0.6</h1>
+    </div>
+    
+    <div>
+    <h1>opacity 1 (default)</h1>
+    </div>
 
-    <h2>Ejemplos</h2>
-
-    <div>etiqueta "div"</div>
-    <div id="miDiv">id "miDiv"</div>
-    <div class="miClase">clase</div>
-    <div class="miOtraClase miOtraOtraClase">etiqueta con clase</div>
+    <h2>background con gradiente</h2>
+    <div class="gradient"><p>gradiente</p></div>
 </body>
 </html>
