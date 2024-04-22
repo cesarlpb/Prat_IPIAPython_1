@@ -1,1 +1,69 @@
 /* Borders */
+
+body {
+    background-color: aliceblue;
+}
+
+p.dotted {
+	border-style: dotted;
+}
+
+p.dashed {
+	border-style: dashed;
+}
+
+p.solid {
+	border-style: solid;
+}
+
+p.double {
+	border-style: double;
+}
+
+p.groove {
+	border-style: groove;
+}
+
+p.ridge {
+	border-style: ridge;
+}
+
+p.inset {
+	border-style: inset;
+}
+
+p.outset {
+	border-style: outset;
+}
+
+p.none {
+	border-style: none;
+}
+
+/* hidden y none parecen hacer lo mismo: border-width se pone a 0 */
+
+p.hidden {
+	border-style: hidden;
+}
+
+p.mix {
+	border-style: dotted dashed solid double;
+    border-width: thin thick; /* thin, medium, thick */
+    border-color: beige burlywood brown rgb(205, 20, 20);
+}
+
+p.fancy {
+    border: 1px solid rgb(30, 29, 29);
+    border-bottom: 3px dashed black;
+}
+/* 
+    Los gradiente no se aplican al borde pero se puede hacer
+    algo como lo siguiente para hacer el efecto:
+    https://css-tricks.com/gradient-borders-in-css/
+*/
+
+p.rounded {
+    border: 1px solid brown;
+    border-radius: 50px;
+    padding: 10px;
+}
