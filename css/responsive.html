@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="logo.png" type="image/x-icon">
+<style>
+* {
+  box-sizing: border-box;
+}
+body, html {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #444;
+}
+p {
+  color: #777
+}
+
+.menu {
+  float: left;
+  width: 20%;
+  min-height: 75vh;
+  max-height: 75vh;
+  overflow-y: auto;
+  text-align: center;
+  /* solo para maquetación: */
+  /* border: 2px solid brown; */
+}
+/* Estilos adicionales para la barra de desplazamiento */
+.menu::-webkit-scrollbar, 
+.right::-webkit-scrollbar,
+.main::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+.menu::-webkit-scrollbar-thumb, 
+.right::-webkit-scrollbar-thumb, 
+.main::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del "pulgarcito" (la barra interna...) de la barra de desplazamiento */
+    border-radius: 5px; /* Radio de borde del "pulgarcito" */
+}
+
+.menu a, footer a {
+  background-color: #e5e5e5;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+
+.main {
+  float: left;
+  color: #eee;
+  width: 60%;
+  padding: 0 20px;
+  min-height: 75vh;
+  max-height: 75vh;
+  overflow-y: auto;
+  /* Solo para maquetación: */
+  /* background-color: brown; */
+}
+.main p {
+  color: #ccc;
+}
+.main h2 {
+  color: #aaa;
+}
+
+.right {
+  background-color: #e5e5e5;
+  float: left;
+  width: 20%;
+  padding: 15px;
+  margin-top: 0px;
+  min-height: 75vh;
+  max-height: 75vh;
+  text-align: center;
+  overflow-y: auto;
+  /* Solo para maquetación: */
+  /* border: 2px solid brown; */
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+  .menu {
+    min-height: auto;
+  }
+}
+
+/* Footer  */
+
+footer > div {
+  background-color:#e5e5e5;
+  text-align:center;
+  padding:10px;
+  margin-top:7px;
+  width: 100vw;
+  min-height: 200px;
+}
+
+footer {
+  color: #777;
+  padding-bottom: 10px;
+  background-color:#e5e5e5;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  /* Fixed hace que siempre se vea el elemento: */
+  /* position: fixed; */ 
+  /* Absolute coloca el elemento donde se posicione */
+  /* position: absolute; */
+  position: relative;
+  /* top, right, bottom, left colocan espaciado desde el lado correspodiente: */
+  bottom: 0px;
+}
+
+/* Media query para responsive del footer y otros elementos: */
+@media only screen and (max-width: 620px) {
+  /* Pantallas de 650px de ancho o menos: */
+  footer .row {
+    flex-direction: column;
+  }
+  footer {
+    position: relative;
+    padding: 0 10px;
+  }
+  .menu, .right, .main {
+    /* Hacemos que no haya barra de navegación en pantallas pequeñas: */
+    max-height: max-content;
+  }
+}
+
+footer a {
+  padding: 2px;
+  margin-top: 3px;
+}
+
+footer ul {
+  padding: 0;
+}
+h1, h2 {
+  color: #333;
+}
+footer h3 {
+  color: #333;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px;
+  justify-content: space-around;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sección principal */
+#container {
+  padding: 20px 0;
+  /* Solo para maquetación: */
+  /* border: 5px solid burlywood; */
+  min-height: 75vh;
+}
+
+/* header */
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#e5e5e5;
+  padding:15px;
+  text-align:center;
+}
+
+.brand img {
+  display: inline-block;
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+.brand h1 {
+  display: inline-block;
+}
+
+footer .brand {
+  flex-direction: column;
+  justify-content: end;
+}
+footer .brand img {
+  margin: 0;
+}
+footer .brand h1, footer .brand p {
+  margin: 3px 0;
+}
+
+footer p > a {
+    width: max-content;
+    margin: 0 auto;
+}
+</style>
+</head>
+<body style="font-family:Verdana;color:#aaaaaa;">
+
+<!-- header -->
+<header>
+  <div class="brand">
+    <img src="logo.png" alt="logo">
+    <h1>Hello World</h1>
+  </div>
+</header>
+
+<!-- Sección principal -->
+<div id="container" style="overflow:auto;">
+  
+  <!-- Menu -->
+  <div class="menu">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <a href="#">Link 4</a>
+    <a href="#">Link 5</a>
+    <a href="#">Link 6</a>
+    <a href="#">Link 7</a>
+    <a href="#">Link 8</a>
+    <a href="#">Link 9</a>
+    <a href="#">Link 11</a>
+    <a href="#">Link 12</a>
+    <a href="#">Link 13</a>
+    <a href="#">Link 14</a>
+    <a href="#">Link 15</a>
+  </div>
+
+  <!-- Main -->
+  <section>
+    <div class="main">
+      <article>
+        <h2>Lorum Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+      </article>
+      <article>
+        <h2>Lorum Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+      </article>
+      <article>
+        <h2>Lorum Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+      </article>
+      <article>
+        <h2>Lorum Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+      </article>
+      <article>
+        <h2>Lorum Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+      </article>
+      <article>
+        <h2>Lorum Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+      </article>
+      <article>
+        <h2>Lorum Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Right -->
+  <section>
+  <div class="right">
+    <article>
+      <h2>Título #1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    </article>
+    
+    <article>
+      <h2>Título #2</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    </article>
+    
+    <article>
+      <h2>Título #3</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    </article>
+    
+    <article>
+      <h2>Título #4</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    </article>
+    
+    <article>
+      <h2>Título #5</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    </article>
+  </div>
+  </section>
+</div>
+
+<footer>
+  <div>
+    <p>
+      &copy; Copyright - Plantilla original de W3schools.com modificada por <a href="https://github.com/cesarlpb">César P.</a>
+    </p>
+    
+    <div class="row">
+
+      <div class="brand">
+        <img src="logo.png" alt="logo">
+        <h1>Hello World</h1>
+        <p>Slogan de la marca o empresa</p>
+      </div>
+
+      <div>
+        <ul class="column">
+          <h3>Título 1</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 4</a>
+        </ul>
+      </div>
+
+      <div>
+        <ul class="column">
+          <h3>Título 2</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 4</a>
+        </ul>
+      </div>
+
+      <div>
+        <ul class="column">
+          <h3>Título 3</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 4</a>
+        </ul>
+      </div>
+    </div>
+
+    <p>
+      Repositorio: <a href="https://github.com/cesarlpb/learn-html">@cesarlpb/learn-html</a>
+    </p>
+
+  </div>
+</footer>
+</body>
+</html>
