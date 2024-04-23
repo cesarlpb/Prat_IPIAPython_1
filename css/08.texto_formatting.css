@@ -1,0 +1,41 @@
+/* Formato de texto */
+
+.text-left {
+	text-align: left;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.text-justify {
+	text-align: justify;
+}
+.right {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+.bdo {
+	direction: rtl;
+	unicode-bidi: bidi-override;
+}
+img.a {
+	vertical-align: baseline;
+  }
+  
+  img.b {
+	vertical-align: text-top;
+  }
+  
+  img.c {
+	vertical-align: text-bottom;
+  }
+  
+  img.d {
+	vertical-align: sub;
+  }
+  
+  img.e {
+	vertical-align: super;
+  }
