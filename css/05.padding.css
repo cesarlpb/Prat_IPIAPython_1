@@ -1,0 +1,23 @@
+/* Padding time */
+
+div {
+    margin-bottom: 5px;
+}
+.padding {
+    width: 300px;
+    padding: 50px;
+    border: 1px solid brown;
+}
+
+.noPadding {
+    width: 300px;
+    padding: 0px;
+    border: 1px solid brown;
+}
+
+.borderBox {
+    width: 300px;
+    padding: 50px;
+    border: 1px solid brown;
+    box-sizing: border-box;
+}
