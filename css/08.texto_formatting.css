@@ -39,3 +39,95 @@ img.a {
   img.e {
 	vertical-align: super;
   }
+
+  .overline {
+	padding-top: 20px;
+
+	border-top: 3px dashed blue;
+	text-decoration: overline;
+
+	text-decoration-color: blue;
+	text-decoration-style: wavy;
+
+	text-decoration-line: overline;
+	text-decoration-thickness: 5px;
+  }
+  
+  .line-through {
+	text-decoration: line-through;
+	text-decoration-style: wavy;
+	text-decoration-color: blue;
+  }
+  
+  .underline {
+	text-decoration: underline;
+	text-decoration-color: blue;
+	/* text-decoration-style: wavy; */
+	text-underline-offset: 10px;
+	text-decoration-skip-ink: auto;
+  }
+  .underline-2 {
+	text-decoration: underline;
+	text-decoration-color: blue;
+	text-decoration-skip-ink: none;
+  }
+  
+  p.ex {
+	text-decoration: overline underline;
+	text-decoration-color: blue;
+  }
+
+  p.uppercase {
+	text-transform: uppercase;
+  }
+  
+  p.lowercase {
+	text-transform: lowercase;
+  }
+  
+  p.capitalize {
+	text-transform: capitalize;
+  }
+  .indent {
+	text-indent: 20px;
+  }
+  .letter-spacing {
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  p.small {
+	line-height: 0.9;
+  }
+  
+  p.big {
+	line-height: 2;
+  }
+
+  p.one {
+	word-spacing: 10px;
+  }
+  
+  p.two {
+	word-spacing: -2px;
+  }
+
+  .nowrap {
+	white-space: nowrap;
+  }
+
+  .shadow-1 {
+	text-shadow: 2px 2px;
+  }
+  .shadow-2 {
+	text-shadow: 2px 2px red;
+  }
+  .shadow-3 {
+	text-shadow: 2px 2px 5px red;
+  }
+  .shadow-4{
+	color: tomato;
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  }
+  /* Más info: https://www.codesdope.com/blog/article/25-creative-css3-text-shadow-effects-you-cant-miss/ */
