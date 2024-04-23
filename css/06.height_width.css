@@ -1,0 +1,54 @@
+/* height y width */
+
+body {
+    margin: 0;
+}
+div {
+    background-color: burlywood;
+    margin-bottom: 10px;
+}
+.uno {
+    width: 100%;
+}
+.dos {
+    width: 100vw;
+}
+.container {
+    background-color: beige;
+    border: 1px solid brown;
+    width: 50vw;
+    box-sizing: border-box;
+}
+.container50 {
+    width: 50%;
+}
+
+.container-v-25 {
+    box-sizing: border-box;
+    border: 1px solid brown;
+    height: 25vh;
+    background-color: beige;
+}
+.container-v-25 > div {
+    display: inline-block;
+}
+.cien-vertical {
+    width: 20%;
+    height: 100%;
+}
+.tres {
+    height: 35vh;
+    width: 20%;
+}
+
+.cuatro {
+    max-width: 300px;
+    width: 400px;
+    /* A pesar de que le colocamos un width mayor, max-width no permite que se extienda el elemento más allá de 300px de ancho */
+}
+
+.cinco {
+    max-height: 25vh;
+    height: 50vh;
+    /* Funciona de la misma forma con height */
+}
