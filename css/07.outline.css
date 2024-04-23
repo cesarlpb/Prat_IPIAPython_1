@@ -1,0 +1,62 @@
+p.dotted {
+	outline-style: dotted;
+}
+
+p.dashed {
+	outline-style: dashed;
+}
+
+p.solid {
+	outline-style: solid;
+}
+
+p.double {
+	outline-style: double;
+}
+
+p.groove {
+	outline-style: groove;
+}
+
+p.ridge {
+	outline-style: ridge;
+}
+
+p.inset {
+	outline-style: inset;
+}
+
+p.outset {
+	outline-style: outset;
+}
+
+p.ex1 {
+	border: 1px solid black;
+	outline-style: solid;
+	outline-color: red;
+	outline-width: thin;
+  }
+  
+  p.ex2 {
+	border: 1px solid black;
+	outline-style: solid;
+	outline-color: red;
+	outline-width: medium;
+  }
+  
+  p.ex3 {
+	border: 1px solid black;
+	outline-style: solid;
+	outline-color: red;
+	outline-width: thick;
+  }
+  
+  p.ex4 {
+	border: 1px solid black;
+	outline-style: solid;
+	outline-color: tomato;
+	outline-width: 4px;
+	/* Equivalencia con atajo outline similar a border: */
+	outline: 4px solid tomato;
+	outline-offset: 5px;
+  }
