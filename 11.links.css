@@ -1,2 +1,39 @@
 /* Links */
 
+a:link {
+    color: black;
+    text-decoration: none;
+}
+  
+/* visited link */
+a:visited {
+    color: gray;
+    text-decoration: none;
+}
+  
+/* mouse over link */
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+  
+/* selected link */
+a:active {
+    color: brown;
+    text-decoration: underline;
+}
+
+/* link como botón: */
+
+a.boton:link, a.boton:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a.boton:hover, a.boton:active {
+    background-color: tomato;
+    color:black;
+  }
