@@ -1,2 +1,35 @@
 /* Fonts */
 
+.font-1 {
+	font-family: serif;
+}
+.font-2 {
+	font-family: sans-serif;
+}
+.font-3 {
+	font-family: monospace;
+}
+.font-4 {
+	font-family: cursive;
+}
+.font-5 {
+	font-family: "Jacquard 12 Charted", system-ui;
+	/* font-family: fantasy; */
+  	font-weight: 400;
+  	font-style: normal
+}
+.arial {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.verdana {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.tahoma {
+	font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+.times {
+	font-family: 'Times New Roman', Times, serif;
+}
+.georgia {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
