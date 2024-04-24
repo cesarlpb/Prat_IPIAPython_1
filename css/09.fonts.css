@@ -121,3 +121,65 @@ p.oblique {
 	font-weight: 900;
 	font-style: italic;
 }
+
+/* font-variant */
+
+p.normal {
+	font-variant: normal;
+}
+p.small {
+	font-variant: small-caps;
+}
+p.caps {
+	text-transform: uppercase;
+}
+
+/* font-size */
+p.fs-small {
+	font-size: small;
+}
+p.fs-medium {
+	font-size: medium;
+}
+p.fs-large {
+	font-size:large;
+	/* font-size: 1.5em; */
+}
+p.responsive{
+	font-size: 5vw;
+}
+p.sofia {
+	font-family: "Sofia", sans-serif;
+	font-size: 7vw;
+	text-shadow: 3px 3px 3px #ababab;
+}
+
+/* Combinación de fuentes: */
+.container {
+	background-color: black;
+	font-family: Verdana, sans-serif;
+	font-size: 16px;
+	color: gray;
+	padding: 1em;
+}
+  
+.container.h1 {
+	font-family: Georgia, serif;
+	font-size: 60px;
+	color: white;
+}
+
+a {
+	color: black;
+	display: inline-block;
+	margin: 0.5em;
+}
+
+/* Atajo font: */
+p.a {
+	font: 20px Arial, sans-serif;
+}
+  
+p.b {
+	font: italic small-caps bold 12px/30px Georgia, serif;
+}
