@@ -1,2 +1,38 @@
 /* Lists */
 
+ul.a {
+    list-style-type: circle;
+}
+
+ul.b {
+    list-style-type:lower-alpha;
+}
+
+ol.c {
+    list-style-type: upper-roman;
+}
+
+ol.d {
+    list-style-type: lower-alpha;
+}
+ul.e {
+    list-style: none; /* Eliminar el marcador de lista estándar */
+    padding-left: 20px; /* Añadir espacio para la imagen */
+}
+
+ul.e li {
+    display: flex; /* Usar flexbox en los elementos <li> */
+    align-items: center; /* Alinear verticalmente los elementos */
+    margin-bottom: 10px;
+}
+
+ul.e li::before {
+    content: ""; /* Crear un seudoelemento para la imagen */
+    width: 25px; /* Ancho de la imagen */
+    height: 22px; /* Alto de la imagen */
+    padding: 1px;
+    background-image: url('pepe-icon.png'); /* URL de la imagen */
+    background-size: cover; /* Ajustar tamaño de la imagen */
+    margin-right: 8px; /* Espacio entre la imagen y el contenido */
+}
+
