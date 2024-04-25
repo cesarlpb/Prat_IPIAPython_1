@@ -58,3 +58,36 @@ ul.g {
     list-style-position: inside;
     padding-left: 20px;
 }
+
+ul.h {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.i {
+    list-style: square inside url("pepe-icon.png");
+}
+
+.color-2 {
+	background: #ff9999;
+	padding: 20px;
+}
+
+.color {
+	background: #3399ff;
+	padding: 20px;
+}
+
+.color-2 li {
+	background: #ffe5e5;
+	color: darkred;
+	padding: 5px;
+	margin-left: 35px;
+}
+
+.color li {
+	background: #cce5ff;
+	color: darkblue;
+	margin: 5px;
+}
