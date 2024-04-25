@@ -1,5 +1,9 @@
 /* Lists */
 
+body {
+    background-color: rgb(210, 210, 157);
+}
+
 ul.a {
     list-style-type: circle;
 }
@@ -36,3 +40,21 @@ ul.e li::before {
     margin-right: 8px; /* Espacio entre la imagen y el contenido */
 }
 
+/* Posición de bullet points */
+
+ul.f, ul.g {
+    border: 1px solid brown;
+}
+ul.f li, ul.g li {
+    border: 1px dashed rgb(183, 142, 88);
+    margin: 5px 0;
+}
+
+ul.f {
+    list-style-position: outside;
+    padding-left: 20px;
+}
+ul.g {
+    list-style-position: inside;
+    padding-left: 20px;
+}
