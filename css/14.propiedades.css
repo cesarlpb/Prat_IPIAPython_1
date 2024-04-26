@@ -101,3 +101,32 @@ div {
   color: white;
   z-index: 0;
 }
+
+#video-container {
+  /* position: fixed; */
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#video-container iframe {
+  width: 560px;
+  height: 315px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#iframe-overlay {
+  display: none;
+  position: absolute;
+  /* top: 0; */
+  /* left: 0; */
+  width: 560px;
+  height: 315px;
+  background-color: rgba(0, 0, 0, 0.75); /* Fondo semitransparente */
+  pointer-events: none; /* Deshabilitar eventos de clic */
+  z-index: 999;
+}
