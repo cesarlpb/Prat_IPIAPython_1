@@ -1,0 +1,11 @@
+/* Propiedades CSS */
+
+:root{
+  font-size: 16px; /*  */
+}
+body {
+  padding: 1rem; /* por defecto 1em = 16px */
+}
+h1 {
+  font-size: 2rem;
+}
