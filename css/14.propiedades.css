@@ -69,3 +69,35 @@ div {
   bottom: 0;
   left: 0;
 }
+
+/* z-index */
+
+#container img {
+  z-index: -1;
+}
+
+#container h3 {
+  display: inline-block;
+  position: absolute;
+  color:gray;
+  text-shadow: 1px 1px 2px white;
+  z-index: 1;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#video {
+  width:30%;
+  margin: 0 auto;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+#video video {
+  z-index: -1;
+}
+#video h2 {
+  position: absolute;
+  color: white;
+  z-index: 0;
+}
