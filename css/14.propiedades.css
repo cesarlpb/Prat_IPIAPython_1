@@ -156,3 +156,41 @@ div {
   aspect-ratio: 1900 / 1069;
   background-color: lightblue;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.box, .box-2 {
+  float: left;
+  width: 33.33%;
+  padding: 1rem;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.box-2 {
+  height: 500px;
+}
+
+.img-container {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.img-container img {
+  width: 100%;
+  min-height: 250px;
+  height: 250px;
+}
+
+.img-clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
