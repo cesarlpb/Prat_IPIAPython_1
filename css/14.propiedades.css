@@ -250,3 +250,48 @@ div {
   width: 100%;
   height: auto;
 }
+
+/* CSS Combinator */
+
+.combinator {
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+/* descendant selector => selector de descendiente */
+/* Seleccionamos los <p> dentro del <div> de clase "combinator" */
+.combinator p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: yellow;
+}
+.combinator > p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: lightblue;
+}
+
+/* Cualquier <a> dentro de clase "combinator" se selecciona: */
+.combinator a {
+  color: red;
+}
+/* Solo los <a> child directos de "combinator" se seleccionan: */
+.combinator > a  {
+  color: blue;
+  text-decoration: none;
+}
+
+/* Selecciona solo la primera coincidencia después del primer elemento: */
+.combinator p + p {
+  color: green;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* El selector de hermano general selecciona todas las coincidencias independiente de la posición */
+li ~ li {
+  color: purple;
+  font-weight: bold;
+  font-style: italic;
+}
