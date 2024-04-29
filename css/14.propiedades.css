@@ -194,3 +194,16 @@ div {
   clear: both;
   display: table;
 }
+
+.inline-block-container {
+  width: 100%;
+  padding: 1rem;
+  /* Ignoe los espacios entre etiquetas para que no tengamos que colocarlas todas en la misma línea sin indentación: */
+  /* Más info en: https://developer.mozilla.org/es/docs/Web/CSS/white-space */
+  white-space: nowrap;
+}
+.inline-block-container img {
+  display: inline-block;
+  width:20%;
+  height: auto;
+}
