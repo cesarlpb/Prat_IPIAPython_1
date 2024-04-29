@@ -207,3 +207,46 @@ div {
   width:20%;
   height: auto;
 }
+
+/* Align */
+
+.align-container {
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.align-container img, .align-container-right img {
+  display: inline-block;
+  width: 20%;
+  height: auto;
+}
+.align-container h3, .align-container p {
+  display: inline-block;
+  width: 20%;
+  text-align: left;
+}
+
+.align-container-right {
+  width:min-content;
+  margin-right:0;
+  margin-left: auto;
+  border: 1px solid black;
+}
+.align-container-right img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+.align-container-left {
+  width:min-content;
+  margin-left: 0;
+  margin-right: auto;
+  border: 1px solid black;
+}
+.align-container-left img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
