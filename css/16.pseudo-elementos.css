@@ -3,3 +3,83 @@
 body {
   padding: 1rem;
 }
+
+p::first-letter {
+  font-size: 2rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-right: 2px;
+  color: red;
+}
+
+p::first-line{
+  font-variant: small-caps;
+}
+
+p {
+  line-height: 2rem;
+}
+
+p:nth-of-type(2) {
+  line-height: 2rem;
+}
+p:nth-of-type(2):before {
+  /* Imagen, caracter, marcador, etc... */
+  content: '|';
+  margin-left: 1px solid red;
+  width: 1px;
+  color: red;
+}
+p:nth-of-type(2):after {
+  content: '.';
+  font-size: 2rem;
+  line-height: 1.5rem;
+  margin-left: 1px solid red;
+  width: 1px;
+  color: red;
+}
+
+ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+li::before {
+  content: '>_';
+  margin-right: 2px;
+  color: red;
+  font-weight: 500;
+}
+
+.marker {
+  padding-left: 1rem;
+}
+.marker li {
+  padding-left: 5px;
+}
+.marker li::before{
+  content: '';
+  color: red;
+}
+.marker li::after{
+  content: ',';
+  padding-left: 2px;
+  font-size: 1.2rem;
+  color: red;
+}
+.marker li:last-of-type:after{
+  content: '.';
+  padding-left: 2px;
+  font-size: 1.2rem;
+  color: red;
+}
+.marker li::marker {
+  content: '>_';
+  color: red;
+}
+
+p::selection {
+  background-color: tomato;
+  color: white;
+}
+
+/* Más sobre pseudo-elementos: https://www.w3schools.com/css/css_pseudo_elements.asp */
