@@ -2,4 +2,39 @@
 
 body {
   padding: 1rem;
+  background-color: beige;
+}
+
+
+img {
+  opacity: 0.5;
+}
+
+img:hover {
+  opacity: 1.0;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+ul li {
+  display: block;
+  width: 300px;
+  margin:0rem auto;
+}
+ul li:not(:last-of-type){
+  border-bottom: 1px solid brown;
+}
+li a:hover {
+  color: white;
+  background-color: brown;
+}
+li a {
+  display: inline-block;
+  color: brown;
+  text-decoration: none;
+  padding: 1rem;
+  background-color: burlywood;
+  width: 100%;
 }
