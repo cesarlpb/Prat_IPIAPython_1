@@ -2,4 +2,32 @@
 
 body {
   padding: 1rem;
+  background-color: beige;
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: gray;
+  text-decoration: line-through;
+}
+
+/* mouse over link */
+a:hover {
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 1px;
+  font-size: 1.1rem;
+  background-color: rgb(74, 74, 74);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* selected link */
+a:active {
+  color: rgb(192, 187, 187);
 }
