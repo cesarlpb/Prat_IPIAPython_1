@@ -78,3 +78,5 @@ li:nth-child(2) {
 q:lang(no) {
   quotes: "''" "''";
 }
+
+/* Más sobre pseudo-clases: https://www.w3schools.com/css/css_pseudo_classes.asp */
