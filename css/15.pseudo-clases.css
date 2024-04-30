@@ -31,3 +31,50 @@ a:hover {
 a:active {
   color: rgb(192, 187, 187);
 }
+
+div {
+  background-color: lightgrey;
+  padding: 1rem;
+}
+div p {
+  visibility: hidden;
+}
+div:hover p {
+  visibility: visible;
+}
+
+/* Elementos li: */
+li:first-child {
+  color: red;
+}
+li:last-child {
+  color: blue;
+}
+
+/* CSS empieza a contar en 1: */
+
+li:nth-child(2) {
+  color: green;
+}
+
+/* clase "li" */
+
+.li:first-of-type {
+  color: purple;
+}
+.li:last-of-type {
+  color: orange;
+}
+.li:nth-last-of-type(2) {
+  color: pink;
+}
+
+/* Ejemplo con pseudo-clase "not" */
+
+.li-2:not(:first-of-type) {
+  color: brown;
+}
+
+q:lang(no) {
+  quotes: "''" "''";
+}
