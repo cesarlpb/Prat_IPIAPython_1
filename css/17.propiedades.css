@@ -186,3 +186,44 @@ li a {
   background-size: cover;
   background: url('flecha-der.svg') ;
 }
+
+form {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+input {
+  width: 300px;
+}
+label {
+  width: 100%;
+  text-align: left;
+}
+input[type="submit"] {
+  width: 100%;
+  background-color: brown;
+  color: white;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Counters */
+body {
+  counter-reset: capitulo;
+}
+.counters h3::before {
+  counter-increment: capitulo;
+  content: "Capítulo " counter(capitulo) ": ";
+}
+
+h3 {
+  counter-reset: subcapitulo;
+}
+h4::before {
+  counter-increment: subcapitulo;
+  content: counter(capitulo) "." counter(subcapitulo) ".- ";
+}
