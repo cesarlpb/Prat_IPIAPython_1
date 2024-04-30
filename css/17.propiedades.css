@@ -119,3 +119,70 @@ li a {
   padding: 15px;
   text-align: center;
 }
+
+/* Galería de imágenes */
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.gallery img {
+  width: 200px;
+  display: block;
+  margin-bottom: 1rem;
+  height: auto;
+}
+
+#navlist {
+  position: relative;
+  display: block;
+  border: 1px solid black;
+  padding: 10px;
+  height: 50px;
+}
+
+#navlist li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 0;
+}
+
+/* Sprites en navbar */
+
+#home a, #prev a, #next a {
+  background-color: unset;
+}
+#home, #prev, #next {
+  border: unset;
+}
+#navlist li, #navlist a {
+  height: 44px;
+  display: block;
+}
+
+#home {
+  left: 0px;
+  width: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: url('casa.svg') 0 0;
+}
+
+#prev {
+  left: 63px;
+  width: 39px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: url('flecha-izq.svg');
+}
+
+#next {
+  left: 129px;
+  width: 39px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: url('flecha-der.svg') ;
+}
