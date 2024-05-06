@@ -20,6 +20,34 @@
 
   <p>Siempre usamos ECMAScript posterior a 2016.</p>
 
+  <h2>Javascript Output</h2>
+
+  <h3>innerHTML</h3>
+
+  <p id="p1">Escribe algo aquí.</p>
+  <p id="p2">Escribe algo aquí.</p>
+  <script>
+    document.getElementById("p1").innerHTML = "<strong>Este p es strong!</strong> p1"
+    document.getElementById("p2").innerHTML = "<strong>Este p es strong!</strong> p2"
+  </script>
+
+  <h3>document.write()</h3>
+  <script>
+    document.write("<h3>Este h3 es escrito con document.write()</h3>")
+  </script>
+
+  <h3>alert</h3>
+  <script>
+    // alert('Hola mundo desde body');
+  </script>
+
+  <h3>console.log()</h3>
+  <script>
+    let x = 5;
+    x = x + 2;
+    console.log('El valor de x es:', x);
+  </script>
+
   <script>
     // Comentario de una línea
     /* Comentario de varias líneas */
