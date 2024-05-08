@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Variables</h1>
+
+  <p>
+    <strong>¿Qué son las variables en JS?</strong>
+  </p>
+  
+  <p>
+    Las variables son <em>contenedores</em> para los datos que usamos en los programas de Javascript.
+  </p>
+
+  <p>En el ordenador, cada dato se guarda en una posición de memoria pero sería complicado usar esas posiciones directamente (se hace en bajo nivel) y por eso los lenguajes de alto nivel como JS nos permiten directamente crear variables y se encargan por detrás de la gestión de memoria necesaria.</p>
+
+  <p>
+    <strong>Ventajas</strong>
+  </p>
+
+  <ul>
+    <li>No hay que complicarse con la gestión de memoria</li>
+    <li>No hay que encargarse de limpiar memoria cuando se dejan de usar variables/li>
+    <li>Es más fácil aprender a programar</li>
+  </ul>
+
+  <p>
+    <strong>Desventajas</strong>
+  </p>
+
+  <ul>
+    <li>No hay optimización de memoria para los tipos de datos (podemos estar usando demasiada memoria para datos pequeños)</li>
+    <li>Los programas son menos eficientes (puede ser relevante cuando hacemos algo que demanda rapidez)</li>
+    <li>Mejorar el rendimiento no siempre es viable</li>
+  </ul>
+
+  <hr>
+
+  <h2>let</h2>
+  <p><code>let</code> se introdujo para evitar redeclaraciones que sí permite <code>var</code> y es la <strong>forma recomendada de declarar variables en JS actualmente:</strong></p>
+  <pre><code>
+    let nombre = 'Juan'; // Declaramos la variable nombre y le asignamos el valor 'Juan'
+    let edad = 30;       // Declaramos la variable edad y le asignamos el valor 30
+  </code></pre>
+
+  <h2>const</h2>
+
+  <p><code>const</code> sirve para mantener un valor fijo. En los tipos primitivos mantiene la estructura y no se puede reasignar valor:</p>
+
+  <pre><code>
+    const PI = 3.1416; // Declaramos la variable PI y le asignamos el valor 3.1416
+    PI = 3.14;         // ERROR: Esto dará un error porque no se puede reasignar un valor a una constante</code>
+  </pre>
+
+  <h2>Recomendaciones</h2>
+  <ul>
+    <li>Declarar y luego usar variable:
+      <pre><code>
+        let nombre;
+        nombre = 'Juan';
+        console.log(nombre); // Juan</code>
+      </pre>
+      también podemos hacer la declaracion y asignación en la misma línea:
+      <pre><code>
+        let nombre = 'Juan';
+        console.log(nombre); // Juan</code>
+      </pre>
+    </li>
+    <li>Usamos <code>const</code> si el tipo de dato no se debe cambiar:
+    <pre><code>
+      const PI = 3.1416; // PI siempre va a guardar este dato numérico </code>
+    </pre>
+    </li>
+    <li>Usamos <code>let</code> por defecto para declarar variables</li>
+    <li><strong>Es buena práctica:</strong> 👉🏼 siempre declaramos y asignamos variables para evitar <code>undefined</code> en la medida de lo posible:
+    <pre><code>
+    let x;
+    console.log("x:", x); // undefined
+    let y = 0;
+    console.log("y:", y); // 0   </code>
+    </pre>
+    </li>
+    <li><strong>Reglas para nombrar variables en JS:</strong>
+      <ul>
+        <li>Las variables pueden contener a-z, A-Z, _, $ y 0-9</li>
+        <li>Las variables deben empezar por letra, _ o $</li>
+        <li>Las variables pueden empezar por $ y _ (se usa en casos especiales o en librerías como jQuery)</li>
+        <li>Las variables son sensibles a mayúsculas y minúsculas, es decir, <code>miVar</code> no es lo mismo que <code>MiVar</code>, etc.</li>
+        <li>No se pueden usar palabras clave de JS como variables, es decir, no puedo crear la variable <code>let</code>: <code>let let = 0; // error</code></li>
+        <li><strong>Es buena práctica: 👉🏼 declarar variables al principio del <em>script</em> (programa).</strong></li>
+        <li>En ocasiones, puede ser útil declarar varias variables en una sola línea:
+          <pre><code>
+            let a, b, c; // Declaramos las variables a, b y c -> undefined 
+            a = 1; b = 2; c = 3; // Asignamos valores a las variables a, b y c
+            // También podemos asignar valor a múltiples variables en una sola línea:
+            let d = 4, e = 5, f = 6; // Declaramos y asignamos valores a las variables d, e y f</code>
+          </pre>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Javascript antes de cierre de body -->
+  <script src="02.variables.js"></script>
+  <!-- Pon el JS aquí ^ -->
+</body>
+</html>
