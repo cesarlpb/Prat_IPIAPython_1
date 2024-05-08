@@ -2,7 +2,21 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
+    background-color: #e3e3e3;
     margin: 0;
     padding: 1rem;
+}
+
+code {
+    color: white;
+    background-color: #333;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+pre {
+    color: white;
+    background-color: #333;
+}
+pre code {
+    padding: 0;
 }
