@@ -20,5 +20,5 @@ let P = 4 * lado;
 // área = lado * lado
 let A = lado * lado;
 
-document.write("<p>El perímetro es: ", P, "</p>");
-document.write("<p>El área es: ", A, "</p>");
+document.write("<p>El perímetro es: ", P, " u", "</p>");
+document.write("<p>El área es: ", A, " u<sup>2</sup>", "</p>");
