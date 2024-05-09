@@ -21,6 +21,8 @@ gramosCebollas = 300 * kgPatatas
 
 */
 
+console.log("--- Ejercicio 06 ---");
+
 let comensales = Number.parseInt(prompt("Introduce el número de comensales:"));
 
 // Constantes:
