@@ -1,7 +1,8 @@
 /*
 En una variable tienes el lado de un cuadrado, debes escribir un programa que te calcule el área y el perímetro del cuadrado.
 
-El area la calculas como lado multiplicado por lado. El perímetro es la suma de los cuatro lados.
+El área la calculas como lado multiplicado por lado. 
+El perímetro es la suma de los cuatro lados.
 
 input: lado
 outputs: perímetro, área
@@ -14,11 +15,14 @@ A = 100
 
 */
 
-let lado = 25;
-// perímetro = 4 * lado
-let P = 4 * lado;
-// área = lado * lado
-let A = lado * lado;
-
-document.write("<p>El perímetro es: ", P, " u", "</p>");
-document.write("<p>El área es: ", A, " u<sup>2</sup>", "</p>");
+let lado = 10;
+let perimetro = 4 * lado;
+let area = lado * lado;
+console.log("--- Ejercicio 02 ---");
+console.log("Lado:", lado);
+console.log("Perímetro:", perimetro);
+console.log("Área:", area);
+// Escribimos la salida usando document.write():
+document.write("<p>El lado es: " + lado + " u</p>");
+document.write("<p>El perímetro es: " + perimetro + " u</p>")
+document.write("<p>El área es: ", area + " u<sup>2</sup></p>");
