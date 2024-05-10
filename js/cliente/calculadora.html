@@ -26,6 +26,7 @@
       margin: 1rem auto;
     }
     .display{
+      height: 30px;
       background-color: brown;
       color: white;
       text-align: end;
@@ -33,10 +34,11 @@
       border-radius: 5px 5px 0 0;
       font-family: monospace;
       font-size: 1.5rem;
+      overflow-x: auto;
     }
-    .boton-borrar {
-
-    }
+    /* .boton-borrar {
+      
+    } */
     .boton-digito {
       width: 20%;
       padding: 0.5em 1.8rem;
@@ -86,19 +88,19 @@
 
   <div class="container">
     
-    <div class="display">0.0</div>
+    <div id="display" class="display"></div>
 
     <div class="row">
-      <div class="boton-digito boton-borrar">&larr; Borrar</div>
+      <div id="btn-borrar" class="boton-digito boton-borrar" onclick="document.getElementById('display').innerText = '';">&larr; Borrar</div>
       <!-- <div class="boton-digito">2</div> -->
       <!-- <div class="boton-digito">3</div> -->
       <div class="boton-operador">÷</div>
     </div>
 
     <div class="row">
-      <div class="boton-digito">1</div>
-      <div class="boton-digito">2</div>
-      <div class="boton-digito">3</div>
+      <div class="boton-digito" onclick="document.getElementById('display').innerText += '1';">1</div>
+      <div class="boton-digito" onclick="document.getElementById('display').innerText += '2';">2</div>
+      <div class="boton-digito" onclick="document.getElementById('display').innerText += '3';">3</div>
       <div class="boton-operador">+</div>
     </div>
 
