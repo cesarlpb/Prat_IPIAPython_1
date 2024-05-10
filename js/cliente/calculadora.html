@@ -3,8 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>Calculadora</title>
+  
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  
   <style>
+    body {
+      background-color: burlywood;
+    }
+    h1 {
+      font-family: "Press Start 2P", system-ui;
+      width: 80%;
+      font-size: 5vw;
+      font-weight: 400;
+      font-style: normal;
+      text-align: center;
+      display: block;
+      margin: 1rem auto;
+    }
     .display{
       background-color: brown;
       color: white;
@@ -14,40 +34,66 @@
       font-family: monospace;
       font-size: 1.5rem;
     }
+    .boton-borrar {
+
+    }
     .boton-digito {
       width: 20%;
       padding: 0.5em 1.8rem;
       border-radius: 5px;
       border: 1px solid rgb(80, 74, 74);
       box-sizing: border-box;
-      box-shadow: 1px 1px ;
+      box-shadow: 1px 1px;
     }
     .boton-operador {
-
+      width: 20%;
+      /* max-width: 15% ; */
+      /* max-width: 100px; */
+      padding: 0.5em 1.8rem;
+      margin: 1px 2px;
+      border-radius: 5px;
+      /* box-sizing: border-box; */
+      background-color: orange;
+      color: white;
+      text-align: center;
+      box-shadow: 1px 1px lightgray;
     }
     .container {
-
+      display: block;
+      margin: 1rem auto;
+      width: 30%;
+      min-width: 300px;
     }
     .row {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       background-color: gray;
       border-bottom: 1px solid rgb(94, 84, 84);
     }
     .row:last-of-type {
       border-radius: 0 0 5px 5px;
     }
-    .cero {
-      width: 60%; /* AQUI */
+    .cero, .boton-borrar {
+      width: 60%;
       text-align: center;
     }
   </style>
 </head>
 <body>
   
+  <h1>Super Calculadora JS</h1>
+
   <div class="container">
     
     <div class="display">0.0</div>
+
+    <div class="row">
+      <div class="boton-digito boton-borrar">&larr; Borrar</div>
+      <!-- <div class="boton-digito">2</div> -->
+      <!-- <div class="boton-digito">3</div> -->
+      <div class="boton-operador">÷</div>
+    </div>
 
     <div class="row">
       <div class="boton-digito">1</div>
