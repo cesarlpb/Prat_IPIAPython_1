@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <style>
+    .display{
+      background-color: brown;
+      color: white;
+      text-align: end;
+      padding: 1rem;
+      border-radius: 5px 5px 0 0;
+      font-family: monospace;
+      font-size: 1.5rem;
+    }
+    .boton-digito {
+      width: 20%;
+      padding: 0.5em 1.8rem;
+      border-radius: 5px;
+      border: 1px solid rgb(80, 74, 74);
+      box-sizing: border-box;
+      box-shadow: 1px 1px ;
+    }
+    .boton-operador {
+
+    }
+    .container {
+
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      background-color: gray;
+      border-bottom: 1px solid rgb(94, 84, 84);
+    }
+    .row:last-of-type {
+      border-radius: 0 0 5px 5px;
+    }
+    .cero {
+      width: 60%; /* AQUI */
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    
+    <div class="display">0.0</div>
+
+    <div class="row">
+      <div class="boton-digito">1</div>
+      <div class="boton-digito">2</div>
+      <div class="boton-digito">3</div>
+      <div class="boton-operador">+</div>
+    </div>
+
+    <div class="row">
+      <div class="boton-digito">4</div>
+      <div class="boton-digito">5</div>
+      <div class="boton-digito">6</div>
+      <div class="boton-operador">-</div>
+    </div>
+
+    <div class="row">
+      <div class="boton-digito">7</div>
+      <div class="boton-digito">8</div>
+      <div class="boton-digito">9</div>
+      <div class="boton-operador">*</div>
+    </div>
+
+    <div class="row">
+      <div class="boton-digito cero">0</div>
+      <!-- <div class="boton-digito">2</div> -->
+      <div class="boton-operador">.</div>
+      <div class="boton-operador">=</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
