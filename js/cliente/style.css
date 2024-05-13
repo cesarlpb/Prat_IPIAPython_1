@@ -36,3 +36,7 @@ td {
     text-align: center;
     padding: 1rem;
 }
+
+.tabla-de-verdad td:last-of-type {
+    background-color: lightgray;
+}
