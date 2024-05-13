@@ -20,3 +20,19 @@ pre {
 pre code {
     padding: 0;
 }
+
+tr:nth-of-type(even) {
+    background-color: lightgray;
+}
+table {
+    display: block;
+    margin: 1rem auto;
+}
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+td {
+    text-align: center;
+    padding: 1rem;
+}

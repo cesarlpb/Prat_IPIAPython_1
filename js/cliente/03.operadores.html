@@ -8,20 +8,360 @@
 </head>
 <body>
   <h1>Operadores</h1>
+  <p>Los operadores son símbolos reservados para realizar ciertas manipulaciones, cálculos, en general <em>operaciones</em> sobre los datos de un programa.</p>
+  <pre><code>
+    let x = 1 + 1; // los unos son operandos y el + es el operador
+  </code></pre>
+  <p>De la misma forma, tenemos más operadores aritméticos.</p>
 
-  <ul>
-    <li>Operadores Aritméticos</li>
+  <img src="diagramas/operadores_1.png" alt="diagrama 01" width="300" style="display: block; margin: 0 auto;">
+
+  <ul style="list-style-type: none; padding-left: 0;">
+    
+    <li>
+      <h2>Operadores Aritméticos</h2>
+    </li>
     <p>Son los operadores para realizar cálculos numéricos: <code>+ - * /</code>, etc.</p>
-    <div style="margin-bottom: 1rem;">
-      <a href="calculadora.html">Calculadora</a>
+
+    <div class="table-container">
+      <table class="">
+        <tbody>
+          <tr>
+            <th style="width:25%">Operador</th>
+            <th>Descripción</th>
+            <th style="width: 50%;">Ejemplo</th>
+          </tr>
+          <tr>
+            <td>+</td>
+            <td>Suma</td>
+            <td>
+              <code>a + b</code>
+            </td>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>Resta</td>
+            <td>
+              <code>a - b</code>
+            </td>
+          </tr>
+          <tr>
+            <td>*</td>
+            <td>Multiplicación</td>
+            <td>
+              <code>a * b</code>
+            </td>
+          </tr>
+          <tr>
+            <td>**</td>
+            <td>Exponente (ES2016) 
+              <br><br>
+              <code>x^y -> x ** y</code>
+            </td>
+            <td>
+              <code>x * x -> x ** 2</code>
+              <br><br>
+              <code>2 ** 3 -> 2 * 2 * 2 -> 8</code>
+            </td>
+          </tr>
+          <tr>
+            <td>/</td>
+            <td>División</td>
+            <td>
+              <code>a / b</code>
+              <br><br>
+              <strong>b no debe ser 0 -> Infinity</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>%</td>
+            <td>Módulo (Resto de divisón) <br>
+              <code>5/3 = 1, R = 2</code>
+            </td>
+            <td>
+              <code>5 % 3 -> 2</code>
+              <br><br>
+              <strong>2 es el resto de la división entera</strong>
+              <br><br>
+              <code>4 % 2 -> 0</code> (división exacta)
+            </td>
+          </tr>
+          <tr>
+            <td>++</td>
+            <td>Incremento: aumenta en 1 el valor</td>
+            <td style="text-align: left;">
+              <pre><code>
+    let x = 1;
+    x++; 
+    // ahora x vale 2
+              </code></pre>
+            </td>
+          </tr>
+          <tr>
+            <td>--</td>
+            <td>Decremento: disminuye en 1 el valor</td>
+            <td style="text-align: left;">
+              <pre><code>
+    let x = 3;
+    x--; 
+    // ahora x vale 2
+              </code></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <li>Operadores de Asignación</li>
-    <li>Operadores de Comparación</li>
-    <li>Operadores de Strings</li>
-    <li>Operadores Lógicos</li>
-    <li>Operadores Bitwise</li>
-    <li>Operador Ternario</li>
-    <li>Operadores de Tipos</li>
+
+    <h3>Proyecto de Calculadora</h3>
+    <div style="margin-bottom: 1rem;">
+      <a href="calculadora.html" target="_blank">Calculadora</a>
+    </div>
+    <li><h2>Operadores de Asignación</h2></li>
+    <p>Son los operadores que realizan una operación aritmética y además asignan el resultado de dicha operación a la variable. <strong>Si bien la notación puede ser más corta, no siempre escribir menos es más claro.</strong></p>
+    <div class="table-container">
+      <table class="">
+        <tbody>
+          <tr>
+            <th style="width:20%">Operador</th>
+            <th style="width: 40%;">Ejemplo</th>
+            <th style="width: 40%;">Equivale a:</th>
+          </tr>
+          <tr>
+            <td>
+            Asignación:
+            <br><br>
+              =
+            </td>
+            <td>x = y</td>
+            <td>x = y</td>
+          </tr>
+          <tr>
+            <td>
+            Suma con asignación:
+            <br><br>
+              +=
+            </td>
+            <td>
+              x += y
+              <pre>
+                <code>
+    let x = 1; // x vale 1 
+    x += 2;   // x vale 3</code>
+              </pre>
+            </td>
+            <td>x = x + y</td>
+          </tr>
+          <tr>
+            <td>
+              Resta con asignación:
+              <br><br>
+              -=</td>
+            <td>x -= y</td>
+            <td>x = x - y</td>
+          </tr>
+          <tr>
+            <td>
+              Multiplicación con asignación:
+              <br><br>
+              *=</td>
+            <td style="text-align: left;">
+              <span style="display: inline-block; text-align: center; width: 100%;">x *= y</span>
+              <pre><code>
+    let x = 1; // x vale 1
+    x *= 2;  // x vale 1*2 -> 2
+    x *= 0; // x vale 0
+    x *= 100 // x vale 0              
+              </code></pre>
+            </td>
+            <td>x = x * y</td>
+          </tr>
+          <tr>
+            <td>
+            División y asignación:
+            <br><br>
+              /=
+            </td>
+            <td>x /= y
+              <br><br>
+            <strong>nótese que no está definido 
+              <br>
+              dividir por cero</strong>
+
+            </td>
+            <td>x = x / y</td>
+          </tr>
+          <tr>
+            <td>
+            Resto y asignación:
+            <br><br>  
+              %=
+            </td>
+            <td style="text-align: left;">
+              <span style="display: inline-block; width: 100%; text-align: center;">x %= y</span>
+            
+            <pre><code>
+    let x = 10; // x vale 10
+    x = 10 % 3; // x vale 10 / 3 -> 3 resto 1 => 1           
+            </code></pre>
+
+            </td>
+            <td>x = x % y</td>
+          </tr>
+          <tr>
+            <td>
+              Exponenciación y asignación:
+              <br><br>
+              **=
+            </td>
+            <td style="text-align: left;">
+              <span style="display: inline-block; text-align: center; width: 100%;">x **= y</span>
+            <pre><code>
+    let x = 2; let y = 3; 2 ** 3 -> 8
+    x **= y; // x vale 8              
+            </code></pre>
+            </td>
+            <td>x = x ** y</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <li><h2>Operadores de Comparación</h2></li>
+    <p>Operadores que permiten evaluar si dos datos son del mismo valor, mayor que, menor o igual, distintos, etc. La comparación puede tener en cuenta solo el valor (<code>==</code>) o también el tipo de los datos (<code>===</code>).
+    <strong>El resultado de las comparaciones es un tipo <code>boolean</code> (true o false) por defecto.</strong>
+    </p>
+    <div class="table-container">
+      <table class="">
+        <tbody>
+          <tr>
+            <th style="width:12%">Operador</th>
+            <th>Descripción</th>
+            <th>Ejemplo:</th>
+          </tr>
+          <tr>
+            <td>==</td>
+            <td>igual que</td>
+            <td>
+              <code>1 == '1' // true</code>
+            </td>
+          </tr>
+          <tr>
+            <td>===</td>
+            <td>igual valor y tipo</td>
+            <td>
+              <pre><code>
+    1 === '1' // false (distinto tipo de datos) </code>
+  </pre>
+            </td>
+          </tr>
+          <tr>
+            <td>!=</td>
+            <td>desigual que (valor)</td>
+            <td><code>1 != '1' // false</code></td>
+          </tr>
+          <tr>
+            <td>!==</td>
+            <td>desigual valor o desigual tipo</td>
+            <td>
+            <code>1 !== '1' // true</code>
+            </td>
+          </tr>
+          <tr>
+            <td>&gt;</td>
+            <td>mayor que</td>
+            <td>
+              <code>5 &gt; 4 // true </code>
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;</td>
+            <td>menor que</td>
+            <td>
+              <code>4 &lt; 5 // true </code>  
+            </td>
+          </tr>
+          <tr>
+            <td>&gt;=</td>
+            <td>mayor o igual que</td>
+            <td>
+              <code>5 &gt;= 5 // true (son iguales) </code>
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;=</td>
+            <td>menor o igual que</td>
+            <td>
+              <code>5 &lt;= 5 // true (son iguales) </code>
+            </td>
+          </tr>
+          <tr>
+            <td>?</td>
+            <td>operador ternario</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <li><h2>Operadores Lógicos</h2></li>
+
+    <div class="table-container">
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr>
+            <th style="width:12%">Operador</th>
+            <th>Descripción</th>
+            <th>Ejemplo:</th>
+          </tr>
+          <tr>
+            <td>&amp;&amp;</td>
+            <td>Y (AND) lógico</td>
+            <td>
+              <pre><code>
+    let x = true; let y = true; 
+    x && y -> true
+              </code></pre>
+            </td>
+          </tr>
+          <tr>
+            <td>||</td>
+            <td>O (OR) lógico</td>
+            <td>
+              <pre><code>
+    let x = true; let y = false; 
+    x || y -> true
+              </code></pre>
+            </td>
+          </tr>
+          <tr>
+            <td>!</td>
+            <td>NO (NOT) lógico</td>
+            <td>
+              <pre><code>
+    let x = true;
+    !x -> false;
+              </code></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <ul>
+        <li><a href="https://es.wikipedia.org/wiki/Puerta_AND">Tabla de verdad de AND</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Puerta_OR">Tabla de verdad de OR</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Puerta_NOT">Tabla de verdad de NOT</a></li>
+      </ul>
+
+    </div>
+
+    <li><h2>Operadores de Strings</h2></li>
+    
+    <li><h2>Operadores Bitwise & Shift</h2></li>
+    
+    <li><h2>Operador Ternario</h2></li>
+    
+    <li><h2>Operadores de Tipos</h2></li>
   </ul>
   
   <!-- Javascript antes de cierre de body -->
