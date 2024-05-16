@@ -2,7 +2,7 @@
 
 let res1 = 2 ** 3; // 8
 let res2 = 2 ** 0; // 1
-let res3 = 0 ** 0  // 1 -> https://es.wikipedia.org/wiki/Cero_elevado_a_cero
+let res3 = 0 ** 0; // 1 -> https://es.wikipedia.org/wiki/Cero_elevado_a_cero
 
 console.log("resultado 1:", res1); // 8
 console.log("resultado 2:", res2); // 1
