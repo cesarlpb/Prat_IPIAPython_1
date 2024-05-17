@@ -5,6 +5,9 @@ let p1 = "<p>Esto es un párrafo</p>";
 let p2 = "<p>Esto es otro párrafo</p>";
 let res = p1 + " " + p2;
 
+// Usamos este elemento para pasarle las etiquetas:
+document.getElementById("myContainer").innerHTML = res;
+
 // Estas cadenas que tienen HTML se pueden introducir como innerHTML dentro de un elemento del documento con JS
 
 // Creamos un div con una lista:
@@ -41,3 +44,6 @@ div2 += "</div>";
 document.getElementById("container2").innerHTML = div2;
 
 // Conclusión: podemos generar HTML como string en JS y pasarlo a un elemento usando innerHTML y el navegador se encarga de interpretarlo como HTML de forma correcta.
+
+// También podemos cambiar estilos con JS:
+document.getElementsByTagName("body")[0].style.backgroundColor = 'beige'; // Cambiamos el color de fondo del body
