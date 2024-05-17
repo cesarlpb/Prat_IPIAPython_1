@@ -195,7 +195,7 @@ const diaDeLaSemana = diasDeLaSemana[new Date().getDay()];
 ```js
 // Operación de suma normal
 let inicioSumaNormal = performance.now(); // Tiempo inicial
-let resultadoSumaNormal = 9999999 + 9999999; // Operación de suma normal
+let resultadoSumaNormal = 2147483646 + 2147483646; // Operación de suma normal
 let finSumaNormal = performance.now(); // Tiempo final
 let tiempoSumaNormal = finSumaNormal - inicioSumaNormal; // Tiempo total
 
@@ -203,7 +203,7 @@ console.log("Tiempo de suma normal:", tiempoSumaNormal, "milisegundos");
 
 // Operación de suma bitwise
 let inicioSumaBitwise = performance.now(); // Tiempo inicial
-let resultadoSumaBitwise = 9999999 << 1; // Operación de multiplicar por 2 en bitwise
+let resultadoSumaBitwise = 2147483646 << 1; // Operación de multiplicar por 2 en bitwise
 let finSumaBitwise = performance.now(); // Tiempo final
 let tiempoSumaBitwise = finSumaBitwise - inicioSumaBitwise; // Tiempo total
 
@@ -211,6 +211,8 @@ console.log("Tiempo de suma bitwise:", tiempoSumaBitwise, "milisegundos");
 ```
 
 ¿Qué ventaja consideras que tienen las operaciones bitwise?
+
+**Conclusión:** solo a veces las operaciones bitwise son más rápidas que las operaciones normales, pero en general, las operaciones bitwise son más rápidas que las operaciones normales.
 
 ## Operaciones básicas en Bitwise
 
@@ -227,6 +229,7 @@ function sumaBitwise(a, b) {
 ```
 ### Resta
 ```js
+// a - b
 function restaBitwise(a, b) {
     b = ~b + 1;
     return sumaBitwise(a, b);
@@ -352,8 +355,61 @@ Implementa la comparativa para dividir por `2`.
 
 # Operador Ternario
 
+Sintaxis: `condición ? expresión1 : expresión2`
+
+`expresion1`: Lo que sucede cuando condición es verdadera.
+`expresion2`: Lo que sucede cuando condición es falsa.
+
+```js
+let edad = Number(prompt("Ingresa tu edad:"));
+edad > 18 ? alert("Puedes pasar") : alert("No puedes pasar");
+```
+
 1. Utiliza un operador ternario para determinar si un número es positivo o negativo.
+```js
+    let numero = Number(prompt("Ingresa un número:"));
+    let mensaje = numero > 0 ? "Es positivo" : "Es negativo";
+    alert(mensaje);
+```
 2. Utiliza un operador ternario para determinar si un año es bisiesto o no.
+```js
+    let año = Number(prompt("Ingresa un año:"));
+    let mensaje = año % 4 == 0 ? "Es bisiesto" : "No es bisiesto";
+    alert(mensaje);
+```
 3. Utiliza un operador ternario para determinar si un número es divisible por 5.
+```js
+    let numero = Number(prompt("Ingresa un número:"));
+    let mensaje = numero % 5 == 0 ? "Es divisible por 5" : "No es divisible por 5";
+    alert(mensaje);
+```
 4. Utiliza un operador ternario para determinar si un número es mayor, menor o igual que cero.
+```js
+    let numero = Number(prompt("Ingresa un número:"));
+    let mensaje = numero > 0 ? // condición del primer ternario
+                            "Es mayor que cero" : // condición verdadera
+                                numero < 0 ?      // condición falsa
+                                    "Es menor que cero" :  // condición verdadera del segundo ternario
+                                    "Es igual a cero";      // condición falsa del segundo ternario
+    /*
+    let mensaje = numero > 0 
+        ? "Es mayor que cero" : numero < 0 
+        ? "Es menor que cero" : "Es igual a cero";   
+        
+    Suele ser mejor:
+    if(condición1) {
+        // código
+    } else if(condición2) {
+        // código
+    } else {
+        // código
+    }
+    */
+    alert(mensaje);
+```
 5. Utiliza un operador ternario para determinar si una persona es adulta o menor de edad, dado su año de nacimiento.
+```js
+    let año = Number(prompt("Ingresa tu año de nacimiento:"));
+    let mensaje = new Date().getFullYear() - año >= 18 ? "Eres mayor de edad" : "Eres menor de edad";
+    alert(mensaje);
+```
