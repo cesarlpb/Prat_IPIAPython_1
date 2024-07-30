@@ -1,0 +1,24 @@
+Entrada: abcde
+Longitud de la cadena más larga sin caracteres repetidos: 5
+Tiempo de ejecución: 0.00000 segundos
+
+Entrada: a1b2c3!
+Longitud de la cadena más larga sin caracteres repetidos: 7
+Tiempo de ejecución: 0.00000 segundos
+
+Entrada: abcdefgh
+Longitud de la cadena más larga sin caracteres repetidos: 8
+Tiempo de ejecución: 0.00000 segundos
+
+Entrada: a1b2c3d4e5f6!
+Longitud de la cadena más larga sin caracteres repetidos: 13
+Tiempo de ejecución: 0.00000 segundos
+
+Entrada: abcdefghijklmnopqrstuvwxyz
+Longitud de la cadena más larga sin caracteres repetidos: 26
+Tiempo de ejecución: 0.00000 segundos
+
+Entrada: a1b2c3d4e5f6g7h8i9j0k!l@m#
+Longitud de la cadena más larga sin caracteres repetidos: 26
+Tiempo de ejecución: 0.00000 segundos
+

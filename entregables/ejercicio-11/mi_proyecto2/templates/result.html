@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Josefin Sans', sans-serif; /* Fuente personalizada */
+            background-color: rgba(152, 255, 152, 0.5); /* Fondo verde menta */
+            color: #333; /* Color del texto */
+        }
+        .container {
+            background-color: white; /* Fondo blanco para el contenedor */
+            border-radius: 8px; /* Bordes redondeados */
+            padding: 20px; /* Espaciado interno */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            max-width: 800px; /* Ancho máximo para el contenedor */
+            margin: auto; /* Centrar el contenedor */
+        }
+        h1 {
+            font-size: 2.5rem; /* Tamaño del título */
+            font-weight: 700; /* Negrita */
+            text-align: center; /* Centrar el título */
+            color: #4CAF50; /* Color verde del título */
+            margin-bottom: 20px; /* Espacio debajo del título */
+        }
+        p {
+            font-size: 1.25rem; /* Tamaño del texto */
+            text-align: justify; /* Justificar el texto a ambos márgenes */
+            margin: 10px 0; /* Espaciado entre párrafos */
+        }
+        .btn-custom {
+            background-color: #4CAF50; /* Verde más oscuro */
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .btn-custom:hover {
+            background-color: #45a049; /* Verde más oscuro en hover */
+        }
+        .title {
+            font-weight: bold; /* Negrita para los títulos */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Resultado</h1>
+        {% if error %}
+            <p>Error: {{ error }}</p>
+        {% else %}
+            <p><span class="title">Contraseña ingresada:</span> {{ query }}</p>
+            <p><span class="title">Longitud de la secuencia más larga de caracteres únicos:</span> {{ longest_length }}</p>
+            <p><span class="title">Fortaleza de la Contraseña:</span> {{ strength }}</p>
+            <p><span class="title">Tiempo de ejecución:</span> {{ execution_time }} segundos</p>
+        {% endif %}
+        <a href="{% url 'home' %}" class="btn-custom">Volver a la búsqueda</a>
+    </div>
+</body>
+</html>
+
