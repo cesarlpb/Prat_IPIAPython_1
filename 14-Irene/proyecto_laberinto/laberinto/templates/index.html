@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generador de Laberintos</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(231 247 255);
+        }
+
+        h1{
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        .container {
+            text-align: center;
+        }
+        .image-container {
+            margin-top: 10px;
+            display: none;
+        }
+        .bfs, #solve {
+            display: none;
+        }
+        .times {
+            margin-top: 20px;
+            display: none;
+        }
+
+        #resultados {
+            display:flex;            
+            align-items: center;
+            justify-content: center;
+        }
+
+        table {
+            margin: 20px;
+            border-radius: 10px;   
+            border-collapse: collapse;                
+        }
+
+        th {
+            border:1px solid black;
+
+            background-color: rgb(111, 177, 218);
+            font-size: larger;
+            padding: 5px
+        }
+
+        td {
+            border:1px solid black;
+            padding: 10px;
+            font-size: large;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Laberintos</h1>
+        <label for="width">Ancho:</label>
+        <input type="number" id="width" value="50">
+        <label for="height">Alto:</label>
+        <input type="number" id="height" value="50">
+        <button id="generate">Generar Laberinto</button>
+        <button id="solve">Resolver Laberinto</button>
+
+        <div id="resultados">
+            <div class="image-container">
+                <img id="maze-image" src="" alt="Laberinto" />
+            </div>
+
+            <div class="times">
+                <table style="width:100%">
+                    <tr>
+                        <th>Tiempo de generación del laberinto:</th>
+                    </tr>
+                    <tr>
+                        <td><span id="laberinto-time"></span> ms</td>
+                    </tr>
+                    <tr class="bfs">
+                        <th>Tiempo de resolución mediante BFS:</th>
+                    </tr>
+                    <tr class="bfs">
+                        <td><span id="bfs-time"></span> ms</td>
+                    </tr>
+                </table>
+            </div>
+        
+        </div>
+
+        {% csrf_token %}
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            let laberinto, startY, endY;
+            $('#generate').unbind().click(function(){
+                let width = $('#width').val();
+                let height = $('#height').val();
+                $('.bfs').hide();
+                $.ajax({
+                    url: 'generate_maze/',
+                    data: {
+                        width: width,
+                        height: height
+                    },
+                    success: function(data) {
+                        $('#maze-image').attr('src', 'data:image/png;base64,' + data.image);
+                        $('#laberinto-time').text(data.laberinto_time.toLocaleString());
+                        $('.image-container').show();
+                        $('.times').show();
+                        $('#solve').show();
+
+                        laberinto = data.laberinto
+                        startY = data.start_y;
+                        endY = data.end_y;
+                    }
+                });
+                $('#solve').unbind().click(function(){
+                    console.log('click solve')
+                    $.post({
+                        url: 'solve_maze/',
+                        data: {
+                            'start_y': startY,
+                            'end_y': endY,
+                            'laberinto': laberinto,
+                            'csrfmiddlewaretoken': $('input[name="csrfmiddlewaretoken"]').val()
+                        },
+                        success: function(data) {
+                            $('#maze-image').attr('src', 'data:image/png;base64,' + data.image);
+                            $('#bfs-time').text(data.bfs_time.toLocaleString());
+                            $('.bfs').show();
+                            $('#solve').hide();
+
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

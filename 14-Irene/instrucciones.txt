@@ -1,0 +1,30 @@
+14. Ruta más corta en un laberinto
+Descripción: Encontrar la ruta más corta en un laberinto dado utilizando BFS (Breadth-First Search). Puntos clave: Búsqueda en anchura, grafos.
+
+Aplicación práctica: En videojuegos, calcular la ruta más corta para un personaje desde su posición actual hasta un objetivo mejora la inteligencia artificial y la experiencia de juego.
+
+Necesarios:
+- Implementar algoritmos que resuelvan el problema
+- Medir el tiempo que lleva ejecutar cada algoritmo implementado
+- Comparar los tiempos de cada caso estudiado
+- Explicar dificultades, soluciones y conclusiones
+
+Recomendable:
+- Hacer una muestra gráfica de los resultados
+
+
+La presentación puede ser en pizarra, con ordenador, con PPT o poner un .txt y explicar, no es necesario hacer un diseño elaborado si no hay tiempo.
+
+Se evalúa en base a 100 puntos:
+
+Orden del código: 10 pts
+Comentarios: 10 pts
+Solución (funciona en mi ordenador?): 30 pts
+Presentación de hasta 10 min: 20 pts
+Features adicionales: 15 pts
+Puntos de estilo: 15 pts
+
+
+La entrega es por PR a la rama entrega-2-algoritmos colocando número y nombre: 02-Pepe. Colocar otro formato quita puntos.
+
+La fecha de entrega es hasta el 30 de julio de 2024 a las 23:59:59
