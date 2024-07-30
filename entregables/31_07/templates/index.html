@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda Binaria vs Búsqueda Lineal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Pruebas de Búsqueda: Binaria vs Lineal</h1>
+        <form id="searchForm">
+            <label for="target">Número a buscar:</label>
+            <input type="number" id="target" name="target" required><br>
+            
+            <button type="submit">Buscar</button>
+        </form>
+        
+        <h2>Resultados</h2>
+        <p id="binaryResult"></p>
+        <p id="linearResult"></p>
+        <canvas id="comparisonChart"></canvas>
+
+        <h2>Algoritmos</h2>
+        <div class="code-section">
+            <h3>Búsqueda Lineal</h3>
+            <pre><code class="language-python">def busqueda_lineal(lista, objetivo):
+    for indice, valor in enumerate(lista):
+        if valor == objetivo:
+            return indice
+    return -1</code></pre>
+
+            <h3>Búsqueda Binaria</h3>
+            <pre><code class="language-python">def busqueda_binaria(lista, objetivo):
+    izquierda, derecha = 0, len(lista) - 1
+    while izquierda <= derecha:
+        medio = (izquierda + derecha) // 2
+        if lista[medio] == objetivo:
+            return medio
+        elif lista[medio] < objetivo:
+            izquierda = medio + 1
+        else:
+            derecha = medio - 1
+    return -1</code></pre>
+        </div>
+
+        <h2>Dificultades, Soluciones y Conclusiones</h2>
+        <p id="difficulties"><b>Dificultades:</b> Asegurar tiempos de ejecución precisos y consistentes.</p>
+        <p id="solutions"><b>Soluciones:</b> time.perf_counter() en lugar de time.time() para obtener tiempos más precisos.</p>
+        <p id="conclusions"><b>Conclusiones:</b> La búsqueda binaria es mucho más rápida que la búsqueda lineal en listas ordenadas, especialmente cuando la lista es grande.</p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(0,228,255);
+    background: linear-gradient(9deg, rgba(0,228,255,1) 12%, rgba(156,201,0,1) 35%, rgba(81,231,136,1) 69%, rgba(0,212,255,1) 98%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin: 5px 0 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result, #time {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#comparisonChart {
+    margin-top: 20px;
+    height: 200px;
+    width: 100%;
+}
+
+.code-section {
+    text-align: left;
+    margin-top: 20px;
+}
+
+pre {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 15px;
+    border-radius: 5px;
+    overflow: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+code {
+    display: block;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
