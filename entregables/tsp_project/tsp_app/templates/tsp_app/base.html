@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Título{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons (optional) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+{% block extra_styles %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% endblock %}
+</head>
+<body>
+
+    <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'tsp_view' %}">TSP App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'tsp_view' %}">Formulario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'compare_results' %}">Comparar Resultados</a>
+                </li>
+            </ul>
+        </div>
+            <div>
+                <button id="toggleDarkMode" class="btn btn-outline-primary">Alternar Modo Oscuro</button>
+            </div>
+    </nav>
+    <!-- Main Content -->
+    <div class="container mt-5">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const confirmationMessages = [
+                'R U sure about that',
+                'Ya estás en el modo correcto',
+                'Solo hay un Blade',
+                'bruh...'
+            ];
+
+            // Verificar la preferencia del usuario o estado almacenado
+            if (localStorage.getItem('theme') === 'dark' ||
+                (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.body.classList.add('dark-mode');
+            }
+
+            // Alternar modo oscuro en base a la acción del usuario
+            document.getElementById('toggleDarkMode').addEventListener('click', function() {
+                const isDarkMode = document.body.classList.contains('dark-mode');
+
+                if (isDarkMode) {
+                    // Seleccionar un mensaje aleatorio del array
+                    const randomMessage = confirmationMessages[Math.floor(Math.random() * confirmationMessages.length)];
+                    // Si está en modo oscuro, pedir confirmación antes de cambiar a modo claro
+                    if (confirm(randomMessage)) {
+                        window.reload()
+                    }
+                } else {
+                    document.body.classList.add('dark-mode');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

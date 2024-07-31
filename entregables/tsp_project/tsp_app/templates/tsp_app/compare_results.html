@@ -1,0 +1,45 @@
+{% extends 'tsp_app/base.html' %}
+
+{% load static %}
+{% block extra_styles %}
+    <link rel="stylesheet" href="{% static 'css/comparar_results.css' %}">
+{% endblock %}
+{% block title %}Comparar Resultados{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1>Comparar Resultados</h1>
+        {% if results %}
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Recorrido</th>
+                        <th>Costo del recorrido</th>
+                        <th>Tiempo de ejecución (segundos)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for result in results %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ result.tour }}</td>
+                            <td>{{ result.tour_cost }}</td>
+                            <td>{{ result.execution_time }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <h3>Mejor Resultado</h3>
+            {% with results|dictsort:"execution_time" as sorted_results %}
+                <p>El mejor tiempo es {{ sorted_results.0.execution_time }} segundos con el recorrido {{ sorted_results.0.tour }}.</p>
+            {% endwith %}
+        {% else %}
+            <p>No hay resultados para comparar.</p>
+        {% endif %}
+        <a href="{% url 'tsp_view' %}" class="btn btn-secondary mt-3">Volver al Formulario</a>
+        <a href="{% url 'delete_all_results' %}" class="btn btn-danger mt-3" onclick="return confirm('¿Estás seguro de que deseas borrar todos los resultados?');">Borrar todo el historial</a>
+    </div>
+{% endblock %}
+
+

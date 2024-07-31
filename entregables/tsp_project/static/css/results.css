@@ -1,0 +1,100 @@
+  /* Estilo para el fondo del contenedor principal */
+    .container {
+        background-color: #ffffff; /* Fondo blanco por defecto */
+        padding: 20px; /* Espaciado interno */
+        border-radius: 8px; /* Bordes redondeados */
+        text-align: center;
+    }
+
+    /* Estilo para el modo oscuro */
+    body.dark-mode .container {
+        background-color: #1f1f1f; /* Fondo oscuro */
+        color: #e0e0e0; /* Texto claro */
+    }
+     body.dark-mode{
+        background-color: #1f1f1f; /* Fondo oscuro */
+        color: #e0e0e0; /* Texto claro */
+    }
+
+    /* Estilo para el modo oscuro */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-size: 50px 50px; /* Tamaño de las flechas */
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente por defecto */
+        border-radius: 50%;
+        width: 50px; /* Ancho */
+        height: 50px; /* Altura */
+    }
+
+    /* Botones personalizados */
+    .btn-dark {
+        color: white;
+        background-color: #343a40; /* Fondo oscuro para el modo oscuro */
+        border-color: #343a40;
+    }
+
+    .btn-dark:hover {
+        color: white;
+        background-color: #23272b; /* Fondo más oscuro para el hover */
+        border-color: #1d2124;
+    }
+
+    /* Estilo para botones de navegación */
+    .btn-secondary {
+        color: #ffffff;
+        background-color: #6c757d; /* Color del botón secundario */
+        border-color: #6c757d;
+    }
+
+    .btn-secondary:hover {
+        color: #ffffff;
+        background-color: #5a6268; /* Color más oscuro para hover */
+        border-color: #545b62;
+    }
+
+    .btn-info {
+        color: #ffffff;
+        background-color: #17a2b8; /* Color del botón info */
+        border-color: #17a2b8;
+    }
+
+    .btn-info:hover {
+        color: #ffffff;
+        background-color: #138496; /* Color más oscuro para hover */
+        border-color: #117a8b;
+    }
+
+/* Estilo para el modo normal */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent; /* Sin fondo */
+    background-size: 50px 50px; /* Tamaño de las flechas */
+}
+
+/* Icono de flecha hacia atrás en modo normal (izquierda) */
+.carousel-control-prev-icon {
+     background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"%3E%3Cpath d="M3.646 4.354a.5.5 0 0 1 0-.707L5.293 1.707a.5.5 0 0 1 .707.707L4.707 4l1.293 1.293a.5.5 0 0 1-.707.707l-1.354-1.354z" fill="%23000"/%3E%3C/svg%3E');
+    }
+
+/* Icono de flecha hacia adelante en modo normal (derecha) */
+.carousel-control-next-icon {
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"%3E%3Cpath d="M3.646 4.354a.5.5 0 0 1 0-.707L5.293 1.707a.5.5 0 0 1 .707.707L4.707 4l1.293 1.293a.5.5 0 0 1-.707.707l-1.354-1.354z" fill="%23000"/%3E%3C/svg%3E');
+    transform: scaleX(-1);
+}
+
+/* Estilo para el modo oscuro */
+body.dark-mode .carousel-control-prev-icon,
+body.dark-mode .carousel-control-next-icon {
+    background-color: transparent; /* Sin fondo */
+}
+
+/* Icono de flecha hacia atrás en modo oscuro (izquierda) */
+body.dark-mode .carousel-control-prev-icon {
+     background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"%3E%3Cpath d="M3.646 4.354a.5.5 0 0 1 0-.707L5.293 1.707a.5.5 0 0 1 .707.707L4.707 4l1.293 1.293a.5.5 0 0 1-.707.707l-1.354-1.354z" fill="%23fff"/%3E%3C/svg%3E');
+   }
+
+/* Icono de flecha hacia adelante en modo oscuro (derecha) */
+body.dark-mode .carousel-control-next-icon {
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"%3E%3Cpath d="M3.646 4.354a.5.5 0 0 1 0-.707L5.293 1.707a.5.5 0 0 1 .707.707L4.707 4l1.293 1.293a.5.5 0 0 1-.707.707l-1.354-1.354z" fill="%23fff"/%3E%3C/svg%3E');
+    transform: scaleX(-1);
+}

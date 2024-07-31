@@ -1,0 +1,87 @@
+{% extends 'tsp_app/base.html' %}
+
+{% block title %}Formulario TSP{% endblock %}
+
+{% block content %}
+<style>
+body {
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+</style>
+<div class="container">
+    <h1>Generar Problema del Viajero</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.num_nodes.label_tag }}
+            {{ form.num_nodes }}
+        </div>
+        <div class="form-group">
+            {{ form.min_weight.label_tag }}
+            {{ form.min_weight }}
+        </div>
+        <div class="form-group">
+            {{ form.max_weight.label_tag }}
+            {{ form.max_weight }}
+        </div>
+        <div class="form-group">
+            {{ form.start_node.label_tag }}
+            {{ form.start_node }}
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Generar</button>
+    </form>
+</div>
+{% endblock %}
