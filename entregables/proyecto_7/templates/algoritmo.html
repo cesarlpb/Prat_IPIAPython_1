@@ -1,0 +1,40 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de patrones con el algoritmo KMP</title>
+    <link rel="stylesheet" href="{% static 'proyecto_7_app/styles.css' %}">
+
+</head>
+<body>
+    <h1>Búsqueda de patrones con el algoritmo KMP</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="text">Texto:</label>
+        <textarea id="text" name="text" rows="4" cols="50">{{ text|default:"" }}</textarea><br><br>
+        <label for="pattern">Patron:</label>
+        <input type="text" id="pattern" name="pattern" value="{{ pattern|default:"" }}"><br><br>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if positions is not None %}
+    <h2>Resultado</h2>
+    <p>Patrón encontrado en las posiciones: {{ positions }}</p>
+    <p>La palabra "{{ pattern }}" se repite {{ count }} veces.</p>
+    <p>El tiempo de ejecución del algoritmo fue:</p>
+    <ul>
+        <li>10 repeticiones: {{ duration_10 }} segundos</li>
+        <li>100 repeticiones: {{ duration_100 }} segundos</li>
+        <li>500 repeticiones: {{ duration_500 }} segundos</li>
+        <li>1000 repeticiones: {{ duration_1000 }} segundos</li>
+    </ul>
+    
+
+    <h2>Gráfico del Tiempo de Ejecución</h2>
+    <img src="{{ graph_url }}" alt="Gráfico del Tiempo de Ejecución">
+
+{% endif %}
+
+</body>

@@ -1,0 +1,10 @@
+7. Reconocimiento de patrones
+Descripción: Implementar el algoritmo KMP (Knuth-Morris-Pratt) para encontrar un patrón en una cadena de texto. Puntos clave: Prefijos, eficiencia de búsqueda de patrones.
+
+Aplicación práctica: En la detección de plagio, buscar patrones de texto repetidos en documentos puede identificar contenido copiado y asegurar la originalidad en trabajos académicos y publicaciones.
+
+
+1) KMP  
+2)"".find("") python 
+3) regex https://regex-generator.olafneumann.org/?sampleText=asdf-asad%40domain.com&flags=PLi&selection=10%7CAlphanumeric%20characters,17%7CMultiple%20characters,5%7CAlphanumeric%20characters
+
