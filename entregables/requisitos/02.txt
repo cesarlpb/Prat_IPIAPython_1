@@ -1,0 +1,8 @@
+Necesarios:
+- Implementar más de un algoritmo de ordenamiento
+- Medir el tiempo que lleva hacer el ordenamiento en cada algoritmo implementado
+- Comparar los tiempos de cada algoritmo en distintos casos
+- Explicar dificultades, soluciones y conclusiones
+
+Recomendable:
+- Hacer una muestra gráfica de los resultados

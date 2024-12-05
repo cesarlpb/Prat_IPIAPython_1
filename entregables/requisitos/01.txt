@@ -1,0 +1,9 @@
+Necesarios:
+- Leer un archivo o fuente de datos de al menos 1 millón de líneas
+- Medir el tiempo que lleva hacer la lectura
+- Comparar los tiempos de lectura en distintos casos
+- Explicar dificultades, soluciones y conclusiones
+
+Recomendable:
+- Implementar más de un método de lectura de los datos
+

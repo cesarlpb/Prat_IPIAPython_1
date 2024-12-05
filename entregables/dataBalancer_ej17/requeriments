@@ -1,0 +1,28 @@
+# Load Balancer
+
+Este es un proyecto simple de balanceo de carga en Python, diseñado como un ejercicio educativo.
+
+## Estructura del Proyecto
+
+- `src/load_balancer.py`: Contiene la lógica del balanceador de carga.
+- `src/server.py`: Simula los servidores que reciben las cargas.
+- `src/main.py`: Punto de entrada del programa.
+- `tests/test_load_balancer.py`: Pruebas unitarias para el balanceador de carga.
+
+## Cómo Ejecutar
+
+1. Instalar las dependencias:
+    ```bash
+    pip install -r requirements.txt (No se requieren dependencias adicionales)
+    ```
+
+2. Ejecutar el programa principal:
+    ```bash
+    python src/main.py
+    ```
+
+3. Ejecutar las pruebas:
+    ```bash
+    python -m unittest discover -s tests
+    ```
+

@@ -1,0 +1,8 @@
+Necesarios:
+- Implementar más de un algoritmo de búsqueda (si es posible)
+- Medir el tiempo que lleva hacer la búsqueda en cada algoritmo implementado
+- Comparar los tiempos de cada algoritmo en distintos casos (si hay más de uno)
+- Explicar dificultades, soluciones y conclusiones
+
+Recomendable:
+- Hacer una muestra gráfica de los resultados

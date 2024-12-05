@@ -1,0 +1,8 @@
+Necesarios:
+- Implementar el algoritmo
+- Medir el tiempo que lleva ejecutar el algoritmo
+- Comparar los tiempos de cada caso estudiado
+- Explicar dificultades, soluciones y conclusiones
+
+Recomendable:
+- Hacer una muestra gráfica de los resultados
